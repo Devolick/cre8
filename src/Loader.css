@@ -1,0 +1,45 @@
+.loader-relative, .loader-fixed, .loader-absolute {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.loader-relative {
+    position: relative;
+}
+
+.loader-fixed {
+    position: fixed;
+}
+
+.loader-absolute {
+    position: absolute;
+}
+
+.loader-relative.loader-cover, 
+.loader-fixed.loader-cover, 
+.loader-absolute.loader-cover {
+    background-color: #ffffff;
+}
+
+.loader-relative .loader-item, 
+.loader-fixed .loader-item, 
+.loader-absolute .loader-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-relative .loader-icon, 
+.loader-fixed .loader-icon, 
+.loader-absolute .loader-icon {
+    height: 92px;
+}

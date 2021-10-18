@@ -1,0 +1,177 @@
+.application {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    font-size: 12px;
+    color: #424242;
+    user-select: none;
+    background-color: #ffffff;
+}
+
+.application-loading-logo {
+    height: 92px;
+    padding: 10px;
+}
+
+.application-header {
+    position: relative;
+    z-index: 3;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 1px 2px lightgray;
+    background-color: #ffffff;
+}
+
+.application-header img.application-header-logo {
+    height: 64px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.application-header img.application-header-video {
+    height: 64px;
+    cursor: pointer;
+    color: #6fbf93;
+}
+
+.application-header img.application-header-video:hover {
+    opacity: 0.6;
+}
+
+.application-header img.application-header-phi {
+    height: 64px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.application-header-space {
+    flex: 1;
+}
+
+.application-header-menu {
+    font-size: 16px;
+    flex: 1;
+}
+
+.application-header-drop-menu {
+    display: none;
+}
+
+.application-header-menu-icon {
+    display: none;
+}
+
+.application-header-menu .header-menu-link,
+.application-header-drop-menu .header-menu-link {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.application-header-menu .header-menu-link:hover,
+.application-header-drop-menu .header-menu-link:hover {
+    opacity: 0.6;
+}
+
+.application-header-menu .header-menu-link.active,
+.application-header-drop-menu .header-menu-link.active {
+    color: #6fbf93;
+}
+
+.application-footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0px -1px 2px lightgray;
+    z-index: 2;
+}
+
+.application-footer .application-footer-text {
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+}
+
+.application-footer .application-footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.application-footer .application-footer-social .application-footer-social-icon {
+    height: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.application-content {
+    z-index: 1;
+    flex: 1;
+    position: relative;
+    overflow: auto;
+}
+
+.application-content .application-page {
+    position: relative;
+    min-height: 100%;
+}
+
+.application-content .application-page-full {
+    position: relative;
+    flex: 1;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .application-header-menu {
+        display: none;
+    }
+
+    .application-header img.application-header-logo,
+    .application-header img.application-header-video,
+    .application-header img.application-header-phi {
+        height: 42px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .application-header-drop-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        min-height: 32px;
+        padding: 10px;
+        font-size: 16px;
+        box-shadow: 0px 1px 2px lightgray;
+        border-top: 1px solid lightgray;
+    }
+
+    .application-header-menu-icon {
+        display: block;
+        height: 34px;
+        color: #6fbf93;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .application-header-menu-icon:hover {
+        opacity: 0.6;
+    }
+}

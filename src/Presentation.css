@@ -1,0 +1,103 @@
+.presentation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.presentation .presentation-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.presentation img.presentation-preview {
+    width: 100%;
+    max-width: 1280px;
+}
+
+.presentation .presentation-contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    padding-right: 0px;
+    width: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #ffffff;
+    box-shadow: 1px 0px 2px lightgray;
+}
+
+.presentation .presentation-contents-close {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.presentation .presentation-contents-close-arrow {
+    height: 20px;
+    transform: rotate(90deg);
+}
+
+.presentation .presentation-contents-picker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    cursor: pointer;
+    background-color: #6fbf93;
+}
+
+.presentation .presentation-contents-picker:hover {
+    opacity: 0.6;
+}
+
+.presentation .presentation-contents-list {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.presentation .presentation-contents-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.presentation .presentation-contents-link:hover {
+    color: #6fbf93;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.presentation .presentation-contents-link._bold {
+    font-weight: 700;
+}
+
+.presentation .presentation-contents-link._selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 1024px) {
+    .presentation .presentation-contents-link {
+        padding: 10px;
+    }
+}
