@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cre8/static/css/main.9438cd84.chunk.css",
-    "main.js": "/cre8/static/js/main.29163fe3.chunk.js",
-    "main.js.map": "/cre8/static/js/main.29163fe3.chunk.js.map",
+    "main.js": "/cre8/static/js/main.1d20a2a7.chunk.js",
+    "main.js.map": "/cre8/static/js/main.1d20a2a7.chunk.js.map",
     "runtime-main.js": "/cre8/static/js/runtime-main.a8acc233.js",
     "runtime-main.js.map": "/cre8/static/js/runtime-main.a8acc233.js.map",
-    "static/js/2.b3481049.chunk.js": "/cre8/static/js/2.b3481049.chunk.js",
-    "static/js/2.b3481049.chunk.js.map": "/cre8/static/js/2.b3481049.chunk.js.map",
+    "static/js/2.9540bf6f.chunk.js": "/cre8/static/js/2.9540bf6f.chunk.js",
+    "static/js/2.9540bf6f.chunk.js.map": "/cre8/static/js/2.9540bf6f.chunk.js.map",
     "index.html": "/cre8/index.html",
     "static/css/main.9438cd84.chunk.css.map": "/cre8/static/css/main.9438cd84.chunk.css.map",
-    "static/js/2.b3481049.chunk.js.LICENSE.txt": "/cre8/static/js/2.b3481049.chunk.js.LICENSE.txt",
+    "static/js/2.9540bf6f.chunk.js.LICENSE.txt": "/cre8/static/js/2.9540bf6f.chunk.js.LICENSE.txt",
     "static/media/10_Accessible for every person.JPG": "/cre8/static/media/10_Accessible for every person.139ee3ec.JPG",
     "static/media/11_Amphitheatre.JPG": "/cre8/static/media/11_Amphitheatre.dced1713.JPG",
     "static/media/12_Exhibition view.JPG": "/cre8/static/media/12_Exhibition view.027e2279.JPG",
@@ -61,8 +61,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a8acc233.js",
-    "static/js/2.b3481049.chunk.js",
+    "static/js/2.9540bf6f.chunk.js",
     "static/css/main.9438cd84.chunk.css",
-    "static/js/main.29163fe3.chunk.js"
+    "static/js/main.1d20a2a7.chunk.js"
   ]
 }
