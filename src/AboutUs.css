@@ -4,16 +4,20 @@
     align-items: center;
     flex: 1;
     height: 100%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .about-us img.about-us-title {
     max-height: 64px;
+    padding-right: 40px;
+    padding-bottom: 20px;
 }
 
 .about-us img.about-us-team {
     max-width: 780px;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .about-us p.about-us-text {
@@ -21,6 +25,22 @@
     width: 100%;
     font-size: 16px;
     text-align: justify;
+    margin: 0px;
+}
+.about-us p.about-us-text._center {
+    text-align: center;
+}
+.about-us p.about-us-text._right {
+    text-align: right;
+}
+.about-us p.about-us-text._space {
+    margin-top: 10px;
+}
+.about-us p.about-us-text._primary {
+    color: #6fbf93;
+}
+.about-us p.about-us-text .link {
+    color: #6fbf93;
 }
 
 .about-us p.about-us-text span {

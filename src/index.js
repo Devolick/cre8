@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 import App from './App';
 
@@ -9,9 +11,13 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <span>CRE8</span>
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <App />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

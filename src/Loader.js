@@ -5,7 +5,7 @@ import circleLoading from './assets/images/circle-loading.svg'
 
 function Loader(props) {
   const {position, delay, onLoading, asItem, renderContent, renderLoading} = props;
-  const [loading, setLoading] = useState(props.loading || !!delay);
+  const [loading, setLoading] = useState(!!props.loading || !!delay);
   const [cover, setCover] = useState(props.cover);
 
   /* eslint-disable */ 
@@ -40,7 +40,7 @@ function Loader(props) {
         <img className="loader-icon" src={circleLoading} alt="Loader" />
       </div>
     }
-    {!cover && renderContent}
+    {renderContent}
   </>;
 }
 

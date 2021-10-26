@@ -7,36 +7,26 @@ import arrowLeft from './assets/images/arrow-left.svg';
 const requireContext = require.context('./assets/images/presentation', false, /\.jpg$/i);
 const presentation = requireContext.keys()
   .reduce((images, item, index) => 
-    ({...images, [(item.replace('./',''))]:requireContext(item)}),{})
+    ({...images, [(item.replace('./',''))]:requireContext(item)}),{});
 
 function Presentation() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [showList, setShowList] = useState(false);
-  const [imgLoading, setimgLoading] = useState('lazy');
+  const [loadedUrls, setLoadedUrls] = useState(getPresentation());
 
-  function onPageLoading(loading) { 
+  function onLoaded(url) {
+    const urls = loadedUrls
+      .filter(f => f !== url);
+    setLoadedUrls(urls);
+    const loading = !!urls.length;
+    setLoading(loading);
     if (!loading) {
-      const anchor = getAnchor();
-      if (anchor) {
-        const scrollToElement = document.getElementById(anchor);
-        if (scrollToElement) {
-          scrollToElement.scrollIntoView();
-        }
-      }
+      goToAnchor();
     }
   }
 
-  function onLoading() {
-    setLoading(true);
-  }
-
-  function onLoaded() {
-    console.log('onLoaded');
-    setLoading(false);
-  }
 
   function onOpenList() {
-    console.log('onOpenList');
     setShowList(!showList);
   }
 
@@ -74,20 +64,28 @@ function Presentation() {
     
     return null;
   }
+
+  function goToAnchor() { 
+    const anchor = getAnchor();
+    if (anchor) {
+      const scrollToElement = document.getElementById(anchor);
+      if (scrollToElement) {
+        scrollToElement.scrollIntoView();
+      }
+    }
+  }
   
-  return <Loader delay={1500} cover={true} 
-  onLoading={(loading) => onPageLoading(loading)}
+  return <Loader position="absolute" delay={1500} cover={true}
   renderContent={
     <div className={`presentation ${!loading && 'fade-in'}`}
       onClick={() => onOpenList()}>
       <div className="presentation-list">
         {getPresentation().map((value, index) => 
-          <img loading={imgLoading} className={`presentation-preview`}
-            id={`presentation-${index}`}
+          <img loading="eager" className={`presentation-preview`}
+            id={`${index}`}
             src={value} alt={`Presentation ${index}`} 
-            onLoad={() => onLoaded(`presentation-${index}`)}/>)
+            onLoad={() => onLoaded(value)}/>)
         }
-        <Loader position="relative" loading={loading} asItem={true}></Loader>
       </div>
       {showList &&
         <div className="presentation-contents">
@@ -97,8 +95,8 @@ function Presentation() {
             .map((name, index) => 
             <a className={`presentation-contents-link 
               ${isPresentationPart(name) && '_bold'} 
-              ${isSelectedAnchor(`#presentation-${index}`) && '_selected'}`}
-              href={`#presentation-${index}`}>
+              ${isSelectedAnchor(`#${index}`) && '_selected'}`}
+              href={`#${index}`}>
               <span>{name}</span>
             </a>)}
           </div>

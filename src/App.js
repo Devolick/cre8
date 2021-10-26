@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Switch,
   Route,
   Redirect,
-  useHistory 
+  useHistory,
+  withRouter
 } from "react-router-dom";
 
 import './App.css';
@@ -21,8 +22,16 @@ import Loader from './Loader';
 
 function App() {
   const history = useHistory();
-  const [selectedPage, setSelectedPage] = useState('cre8/project');
+  const [selectedPage, setSelectedPage] = useState('/project');
   const [openMenu, setOpenMenu] = useState(false);
+
+  /* eslint-disable */ 
+  useEffect(() => {
+    history.listen(() => {
+      setSelectedPage(history.location.pathname);
+    });
+    setSelectedPage(history.location.pathname);
+  }, []); 
 
   function onOpenMenu(on) {
     setOpenMenu(on);
@@ -37,12 +46,12 @@ function App() {
   }
 
   const renderMenu = <>
-    <span className={`header-menu-link ${selectedPage === '/cre8/project' && 'active'}`} 
-      onClick={() => onPageActive('/cre8/project')}>Project</span>
-    <span className={`header-menu-link ${selectedPage === '/cre8/presentation' && 'active'}`} 
-      onClick={() => onPageActive('/cre8/presentation')}>Presentation</span>
-    <span className={`header-menu-link ${selectedPage === '/cre8/aboutus' && 'active'}`}
-      onClick={() => onPageActive('/cre8/aboutus')}>About Us</span>
+    <span className={`header-menu-link ${selectedPage === '/project' && 'active'}`} 
+      onClick={() => onPageActive('/project')}>Project</span>
+    <span className={`header-menu-link ${selectedPage === '/presentation' && 'active'}`} 
+      onClick={() => onPageActive('/presentation')}>Presentation</span>
+    <span className={`header-menu-link ${selectedPage === '/aboutus' && 'active'}`}
+      onClick={() => onPageActive('/aboutus')}>About Us</span>
   </>;
 
   return <Loader position="fixed" delay={3000} cover={true} 
@@ -54,7 +63,7 @@ function App() {
             onClick={() => onOpenMenu(!openMenu)} />
           <img className="application-header-logo" src={logo} alt="Logo" />
           <img className="application-header-video" src={youtube} alt="Video"
-            onClick={() => onPageActive('/cre8/video')} />
+            onClick={() => onPageActive('/video')} />
           <div className="application-header-menu">
             {renderMenu}
           </div>
@@ -70,28 +79,27 @@ function App() {
         </div>
         <div className="application-content">
           <Switch>
-            <Route path="/cre8/project" render={() => 
-              <div className="application-page">
+            <Route path="/project" render={() => 
+              <div className="application-page-full">
                 <Project></Project>
               </div>
             } />
-            <Route path="/cre8/presentation" render={() => 
+            <Route path="/presentation" render={() => 
               <div className="application-page-full">
                 <Presentation></Presentation>
               </div>
             } />
-            <Route path="/cre8/aboutus" render={() => 
-              <div className="application-page">
+            <Route path="/aboutus" render={() => 
+              <div className="application-page-full">
                 <AboutUs></AboutUs>
               </div>
             } />
-            <Route path="/cre8/video" render={() => 
+            <Route path="/video" render={() => 
               <div className="application-page-full">
                 <Video></Video>
               </div>
             } />
-            <Route exact path="/cre8" render={() => <Redirect to="/cre8/project" />} />
-            <Route render={() => <Redirect to="/cre8" />} />
+            <Route path="/" render={() => <Redirect to="/project" />} />
           </Switch>
         </div>
         <div className="application-footer">
@@ -111,4 +119,4 @@ function App() {
     }></Loader>;
 }
 
-export default App;
+export default withRouter(App);
