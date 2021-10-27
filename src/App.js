@@ -22,7 +22,7 @@ import Loader from './Loader';
 
 function App() {
   const history = useHistory();
-  const [selectedPage, setSelectedPage] = useState('/project');
+  const [selectedPage, setSelectedPage] = useState('/cre8/project');
   const [openMenu, setOpenMenu] = useState(false);
 
   /* eslint-disable */ 
@@ -46,12 +46,12 @@ function App() {
   }
 
   const renderMenu = <>
-    <span className={`header-menu-link ${selectedPage === '/project' && 'active'}`} 
-      onClick={() => onPageActive('/project')}>Project</span>
-    <span className={`header-menu-link ${selectedPage === '/presentation' && 'active'}`} 
-      onClick={() => onPageActive('/presentation')}>Presentation</span>
-    <span className={`header-menu-link ${selectedPage === '/aboutus' && 'active'}`}
-      onClick={() => onPageActive('/aboutus')}>About Us</span>
+    <span className={`header-menu-link ${selectedPage === '/cre8/project' && 'active'}`} 
+      onClick={() => onPageActive('/cre8/project')}>Project</span>
+    <span className={`header-menu-link ${selectedPage === '/cre8/presentation' && 'active'}`} 
+      onClick={() => onPageActive('/cre8/presentation')}>Presentation</span>
+    <span className={`header-menu-link ${selectedPage === '/cre8/aboutus' && 'active'}`}
+      onClick={() => onPageActive('/cre8/aboutus')}>About Us</span>
   </>;
 
   return <Loader position="fixed" delay={3000} cover={true} 
@@ -63,7 +63,7 @@ function App() {
             onClick={() => onOpenMenu(!openMenu)} />
           <img className="application-header-logo" src={logo} alt="Logo" />
           <img className="application-header-video" src={youtube} alt="Video"
-            onClick={() => onPageActive('/video')} />
+            onClick={() => onPageActive('/cre8/video')} />
           <div className="application-header-menu">
             {renderMenu}
           </div>
@@ -79,27 +79,27 @@ function App() {
         </div>
         <div className="application-content">
           <Switch>
-            <Route path="/project" render={() => 
+            <Route path="/cre8/project" render={() => 
               <div className="application-page-full">
                 <Project></Project>
               </div>
             } />
-            <Route path="/presentation" render={() => 
+            <Route path="/cre8/presentation" render={() => 
               <div className="application-page-full">
                 <Presentation></Presentation>
               </div>
             } />
-            <Route path="/aboutus" render={() => 
+            <Route path="/cre8/aboutus" render={() => 
               <div className="application-page-full">
                 <AboutUs></AboutUs>
               </div>
             } />
-            <Route path="/video" render={() => 
+            <Route path="/cre8/video" render={() => 
               <div className="application-page-full">
                 <Video></Video>
               </div>
             } />
-            <Route path="/" render={() => <Redirect to="/project" />} />
+            <Route path="/" render={() => <Redirect to="/cre8/project" />} />
           </Switch>
         </div>
         <div className="application-footer">
