@@ -10,7 +10,6 @@ const presentation = requireContext.keys()
     ({...images, [(item.replace('./',''))]:requireContext(item)}),{});
 
 function Presentation() {
-  const [loading, setLoading] = useState(true);
   const [showList, setShowList] = useState(false);
   const [loadedUrls, setLoadedUrls] = useState(getPresentation());
 
@@ -19,7 +18,6 @@ function Presentation() {
       .filter(f => f !== url);
     setLoadedUrls(urls);
     const loading = !!urls.length;
-    setLoading(loading);
     if (!loading) {
       goToAnchor();
     }
@@ -77,7 +75,7 @@ function Presentation() {
   
   return <Loader position="absolute" delay={1500} cover={true}
   renderContent={
-    <div className={`presentation ${!loading && 'fade-in'}`}
+    <div className="presentation"
       onClick={() => onOpenList()}>
       <div className="presentation-list">
         {getPresentation().map((value, index) => 
@@ -87,7 +85,7 @@ function Presentation() {
             onLoad={() => onLoaded(value)}/>)
         }
       </div>
-      {showList &&
+      {!loadedUrls.length && showList &&
         <div className="presentation-contents">
           <div className="presentation-contents-list">
             {getPresentation()

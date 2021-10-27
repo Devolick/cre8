@@ -4,13 +4,12 @@
     align-items: center;
     flex: 1;
     height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+    padding: 20px;
 }
 
 .about-us img.about-us-title {
     max-height: 64px;
-    padding-right: 40px;
     padding-bottom: 20px;
 }
 
