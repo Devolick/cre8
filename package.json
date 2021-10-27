@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Devolick/cre8/issues"
   },
-  "homepage": "http://create8.space",
+  "homepage": "http://create8.space/cre8",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
