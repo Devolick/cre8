@@ -79,26 +79,10 @@ function App() {
         </div>
         <div className="application-content">
           <Switch>
-            <Route path="/project" render={() => 
-              <div className="application-page-full">
-                <Project></Project>
-              </div>
-            } />
-            <Route path="/presentation" render={() => 
-              <div className="application-page-full">
-                <Presentation></Presentation>
-              </div>
-            } />
-            <Route path="/aboutus" render={() => 
-              <div className="application-page-full">
-                <AboutUs></AboutUs>
-              </div>
-            } />
-            <Route path="/video" render={() => 
-              <div className="application-page-full">
-                <Video></Video>
-              </div>
-            } />
+            <Route path="/project" render={() => <Project /> } />
+            <Route path="/presentation" render={() => <Presentation /> } />
+            <Route path="/aboutus" render={() => <AboutUs /> } />
+            <Route path="/video" render={() => <Video /> } />
             <Route path="/" render={() => <Redirect to="/project" />} />
           </Switch>
         </div>

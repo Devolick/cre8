@@ -6,6 +6,7 @@
     height: 100%;
     padding: 20px;
     padding: 20px;
+    overflow: auto;
 }
 
 .about-us img.about-us-title {

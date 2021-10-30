@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
 import './Presentation.css';
-import Loader from './Loader';
 import arrowLeft from './assets/images/arrow-left.svg';
+import Loader from './Loader';
 
 const requireContext = require.context('./assets/images/presentation', false, /\.jpg$/i);
 const presentation = requireContext.keys()
@@ -22,7 +22,6 @@ function Presentation() {
       goToAnchor();
     }
   }
-
 
   function onOpenList() {
     setShowList(!showList);
@@ -73,7 +72,7 @@ function Presentation() {
     }
   }
   
-  return <Loader position="absolute" delay={1500} cover={true}
+  return <Loader delay={1500} cover={true}
   renderContent={
     <div className="presentation"
       onClick={() => onOpenList()}>
@@ -103,9 +102,11 @@ function Presentation() {
           </div>
         </div>
       }
-      <div className="presentation-contents-picker"></div>
+      {!loadedUrls.length &&
+        <div className="presentation-contents-picker"></div>
+      }
     </div>
-  }></Loader>;
+  }/>;
 }
 
 export default Presentation;

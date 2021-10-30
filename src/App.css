@@ -123,13 +123,7 @@
 
 .application-content .application-page {
     position: relative;
-    min-height: 100%;
-}
-
-.application-content .application-page-full {
-    position: relative;
     flex: 1;
-    height: 100%;
 }
 
 @media only screen and (max-width: 1024px) {
