@@ -102,8 +102,14 @@ function Presentation() {
           </div>
         </div>
       }
+      {!loadedUrls.length && !showList &&
+        <div className="presentation-contents-open">
+          <img className="presentation-contents-open-arrow" src={arrowLeft} alt="Arrow Left" />
+        </div>
+      }
       {!loadedUrls.length &&
-        <div className="presentation-contents-picker"></div>
+        <div className="presentation-contents-picker">
+        </div>
       }
     </div>
   }/>;
