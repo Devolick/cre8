@@ -47,6 +47,12 @@
     padding-right: 10px;
 }
 
+.application-header img.application-header-mot {
+    height: 64px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .application-header-space {
     flex: 1;
 }
@@ -132,11 +138,17 @@
     }
 
     .application-header img.application-header-logo,
-    .application-header img.application-header-video,
-    .application-header img.application-header-phi {
-        height: 42px;
-        padding-left: 5px;
+    .application-header img.application-header-video {
+        height: 32px;
+        padding-left: 0px;
         padding-right: 5px;
+    }
+
+    .application-header img.application-header-mot,
+    .application-header img.application-header-phi {
+        height: 32px;
+        padding-left: 5px;
+        padding-right: 0px;
     }
 
     .application-header-drop-menu {
@@ -155,17 +167,20 @@
         box-shadow: 0px 1px 2px lightgray;
         border-top: 1px solid lightgray;
     }
-
     .application-header-menu-icon {
         display: block;
-        height: 34px;
+        height: 20px;
         color: #6fbf93;
         cursor: pointer;
-        padding-left: 5px;
         padding-right: 5px;
     }
-
     .application-header-menu-icon:hover {
         opacity: 0.6;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .application-header-drop-menu {
+        font-size: 14px;
     }
 }

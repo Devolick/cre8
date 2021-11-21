@@ -14,6 +14,7 @@ import facebook from './assets/images/facebook.svg';
 import youtube from './assets/images/youtube.svg';
 import menuButton from './assets/images/menu-button.svg';
 import passiveHouseInstitute from './assets/images/passivehouseinstitute.png';
+import dimosTrikalon from './assets/images/dimosTrikalon.png';
 import Presentation from './Presentation';
 import Project from './Project';
 import Video from './Video';
@@ -61,7 +62,8 @@ function App() {
         <div className="application-header">
           <img className="application-header-menu-icon" src={menuButton} alt="Menu"
             onClick={() => onOpenMenu(!openMenu)} />
-          <img className="application-header-logo" src={logo} alt="Logo" />
+          <img className="application-header-logo" src={logo} alt="Logo"
+            onClick={() => onPageActive('/project')} />
           <img className="application-header-video" src={youtube} alt="Video"
             onClick={() => onPageActive('/video')} />
           <div className="application-header-menu">
@@ -73,6 +75,9 @@ function App() {
               {renderMenu}
             </div>
           }
+          <a href="https://trikalacity.gr/" target="_blank" rel="noreferrer" title="Municipality Of Trikala">
+            <img className="application-header-mot" src={dimosTrikalon} alt="Municipality Of Trikala" />
+          </a>
           <a href="https://eipak.org/" target="_blank" rel="noreferrer">
             <img className="application-header-phi" src={passiveHouseInstitute} alt="Passive House Institute" />
           </a>
