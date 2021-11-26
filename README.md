@@ -1,6 +1,6 @@
 # [CRE8](https://create8.space)
 
-### Project by
+### Created by
 
 - NADIA KRAVTCOVA (TEAM LEADER) Architect
 - EVGENIA MALAMOGLOU - Architect
