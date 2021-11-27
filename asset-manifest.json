@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bbba63d.chunk.css",
-    "main.js": "/static/js/main.27802ab4.chunk.js",
-    "main.js.map": "/static/js/main.27802ab4.chunk.js.map",
+    "main.css": "/static/css/main.090c8cd7.chunk.css",
+    "main.js": "/static/js/main.0bb6756f.chunk.js",
+    "main.js.map": "/static/js/main.0bb6756f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.aafcc571.js",
     "runtime-main.js.map": "/static/js/runtime-main.aafcc571.js.map",
     "static/js/2.cb605577.chunk.js": "/static/js/2.cb605577.chunk.js",
     "static/js/2.cb605577.chunk.js.map": "/static/js/2.cb605577.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.8bbba63d.chunk.css.map": "/static/css/main.8bbba63d.chunk.css.map",
+    "static/css/main.090c8cd7.chunk.css.map": "/static/css/main.090c8cd7.chunk.css.map",
     "static/js/2.cb605577.chunk.js.LICENSE.txt": "/static/js/2.cb605577.chunk.js.LICENSE.txt",
     "static/media/10_Accessible for every person.JPG": "/static/media/10_Accessible for every person.139ee3ec.JPG",
     "static/media/11_Amphitheatre.JPG": "/static/media/11_Amphitheatre.dced1713.JPG",
@@ -21,6 +21,7 @@
     "static/media/18_Kitchen view.JPG": "/static/media/18_Kitchen view.6ffda725.JPG",
     "static/media/19_Office space for 5.JPG": "/static/media/19_Office space for 5.b34ca6f8.JPG",
     "static/media/1_INTRO.JPG": "/static/media/1_INTRO.61bc534b.JPG",
+    "static/media/1stplace.02fd195f.png": "/static/media/1stplace.02fd195f.png",
     "static/media/20_Office for 2.JPG": "/static/media/20_Office for 2.a514921a.JPG",
     "static/media/21_Lockers view.JPG": "/static/media/21_Lockers view.0389a997.JPG",
     "static/media/22_Main office view.JPG": "/static/media/22_Main office view.6948ddc7.JPG",
@@ -63,7 +64,7 @@
   "entrypoints": [
     "static/js/runtime-main.aafcc571.js",
     "static/js/2.cb605577.chunk.js",
-    "static/css/main.8bbba63d.chunk.css",
-    "static/js/main.27802ab4.chunk.js"
+    "static/css/main.090c8cd7.chunk.css",
+    "static/js/main.0bb6756f.chunk.js"
   ]
 }
