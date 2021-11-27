@@ -4,7 +4,7 @@ import './Presentation.css';
 import arrowLeft from './assets/images/arrow-left.svg';
 import Loader from './Loader';
 
-const requireContext = require.context('./assets/images/presentation', false, /\.jpg$/i);
+const requireContext = require.context('./assets/images/presentation', false, /\.(jpg|gif)$/i);
 const presentation = requireContext.keys()
   .reduce((images, item, index) => 
     ({...images, [(item.replace('./',''))]:requireContext(item)}),{});
